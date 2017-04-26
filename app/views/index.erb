@@ -1,24 +1,30 @@
-<p><%= @errors %></p>
 
 <p> <%= "#{session[:id]}" %> </p>
 
 <div class="container">
-  <% if !session[:id] %>
-    <h1>Welcome to TVland!</h1>
-  <% else %>
-    <h1>Main Page</h1>
-  <% end %>
+  <div class="main">
+  <p><%= @errors %></p>
 
+    <H1>Log in to have your fortune read.</H1>
 
-  <p><a href='sessions/new'>Log In</a></p>
-  <a href='users/new'>Join TVland</a>
-  <div class="list">
-    <ul>
-      <h2>List of Available Channels</h2>
-      <% @channels.each do |channel| %>
-        <li> <%= "#{channel.name}"%> <a href="channels/<%=channel.id %>"> (Details)</a> </li>
-      <% end %>
-    </ul>
+    <form action="/sessions" method="post" >
+    <label for="email">Email:</label>
+    <input type="text" name="email"/>
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password"/>
+    <br>
+
+    <input type="submit" name="login"/>
+
+    </form>
+    <h2><a href="users/new">Join</a></h2>
+
   </div>
 </div>
+
+
+
+
 

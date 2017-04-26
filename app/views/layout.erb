@@ -10,6 +10,13 @@
   <title></title>
 </head>
 <body>
+  <h1>HABANA 3AM</h1>
+  <H2>Awaken Your Soul</H2>
+  <% if session[:id] %>
+  <h3><a href="/sessions/logout">Log Out</a>
+  <%end%>
+  </body>
+
   <%= yield %>
 </body>
 </html>
