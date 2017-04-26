@@ -1,0 +1,25 @@
+
+<div class="container">
+<p> <%= "#{session[:id]}" %> </p>
+    <p><%= @errors %></p>
+    <h1>Sign Up Form</h1>
+    <form method="post" action='/users'>
+        <label for="input">First Name:</label>
+        <input name="user[first_name]" type="text">
+        <br>
+
+        <label for="input">Last Name:</label>
+        <input  name="user[last_name]" type="text">
+        <br>
+
+        <label for="input">Email</label>
+        <input name="user[email]" type="text">
+        <br>
+
+        <label for="input">Password:</label>
+        <input type="password" name="password" type="text">
+        <br>
+      <input type="submit" value="Sign Up!" class="button">
+    </form>
+    <a href="/sessions/new">Already a member.</a>
+</div>

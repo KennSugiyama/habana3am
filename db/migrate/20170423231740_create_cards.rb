@@ -1,6 +1,6 @@
 class CreateCards < ActiveRecord::Migration
   def change
-    creat_table :cards do |t|
+    create_table :cards do |t|
       t.string  :title,  :null => false
       t.string  :fortune_1, :null => false
       t.string  :fortune_2, :null => false
